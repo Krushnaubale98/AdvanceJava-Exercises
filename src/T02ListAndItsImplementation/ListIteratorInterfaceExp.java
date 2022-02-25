@@ -1,0 +1,33 @@
+package T02ListAndItsImplementation;
+
+import java.util.*;
+
+public class ListIteratorInterfaceExp {
+
+	public static void main(String[] args) {
+
+		List<String> li = new ArrayList<String>();
+		li.add("Amit");
+		li.add("Vijay");
+		li.add("Kumar");
+
+		// add elements specific position using index
+		li.add(1, "Schin");
+
+		// Iterate the elements(Its traversing the elements)
+
+		ListIterator<String> itr = li.listIterator();
+		System.out.println("Traversing the elements in forword direction");
+		while (itr.hasNext()) {
+			System.out.println("Index: " + itr.nextIndex() + " Value " + itr.next());
+		}
+		System.out.println("Traversing the elements in backword direction");
+		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   {
+			while (itr.hasPrevious()) {
+				System.out.println(" Index" + itr.previousIndex() + " value" + itr.previous());
+			}
+		}
+
+	}
+
+}
